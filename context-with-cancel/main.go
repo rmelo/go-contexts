@@ -25,8 +25,9 @@ func main() {
 
 	go f(1, ctx)
 	go f(2, ctx)
+	go f(3, ctx)
 
 	fmt.Println("Finishing program...\t[WAITING]")
-	time.Sleep(time.Second * time.Duration(5))
+	time.Sleep(time.Second * time.Duration(3))
 	fmt.Println("Finished\t\t[OK]")
 }

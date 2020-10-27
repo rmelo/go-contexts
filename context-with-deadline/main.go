@@ -14,10 +14,10 @@ func main() {
 	defer cancel()
 
 	select {
-		case <-time.After(2 * time.Second):
-			fmt.Println("overslept")
-		case <-ctx.Done():
-			fmt.Println(ctx.Err())
+	case <-time.After(2 * time.Second):
+		fmt.Println("overslept")
+	case <-ctx.Done():
+		fmt.Println(ctx.Err())
 	}
 
 }
